@@ -1,0 +1,150 @@
+/*reset*/
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+    margin: 0;
+}
+/*
+3. Allow percentage-based heights in the application
+*/
+html, body {
+    height: 100%;
+}
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+.attribution{
+    display: none;
+}
+@import url(https://fonts.google.com/specimen/Montserrat);
+@import url(https://fonts.google.com/specimen/Fraunces);
+ 
+:root{
+    --clr-primary-Darkcyan:hsl(158, 36%, 37%);
+    --clr-primary-darker:hsl(158, 36%, 20%);
+    --clr-primary-Cream:hsl(30, 38%, 92%);
+
+    --clr-neutral-Verydarkblue:hsl(212, 21%, 14%);
+    --clr-neutral-Darkgrayishblue:hsl(228, 12%, 48%);
+    --clr-neutral-White:hsl(0, 0%, 100%);
+
+    --ff-fontdecor: 'Fraunces', serif;
+    --ff-fontbase: 'Montserrat', sans-serif;
+
+    --fw-regular: 500;
+    --fw-bold: 700;
+}
+
+body{ 
+    font-family: var(--ff-fontbase);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-Darkgrayishblue);
+    font-size: 14px;  
+    background-color: var(--clr-primary-Cream);
+    display: grid;
+    place-content: center;
+    margin: 1rem; /*spacing on the left and right*/
+    line-height: 1.7;
+
+} 
+
+button{
+    cursor: pointer;
+    padding: 0.75em 1.5em;
+    display: inline-flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+
+    border: 0;
+    border-radius: 0.5rem;
+    background-color: var(--clr-primary-Darkcyan);
+    color: var(--clr-neutral-White);
+    font-weight: var(--fw-bold);
+    font-size: 0.9rem;
+}
+
+button:is(:hover,:focus){
+    background-color: var(--clr-primary-darker);
+}
+/*utilities*/
+.product-price{
+    display: flex;
+    gap: 1rem;
+    flex-wrap:wrap;
+    align-items: center;
+} 
+.product{
+    --content-padding: 1.5rem;
+    --content-spacing: 1rem;
+
+    display: grid;
+    background-color: var(--clr-neutral-White);
+    border-radius: 0.5rem;/*curving the corner*/
+    overflow: hidden;
+    max-width: 600px;
+}
+
+@media (min-width: 600px){
+    .product {
+        --content-padding: 2rem; 
+        grid-template-columns: 1fr 1fr;
+    }
+} 
+
+.product-content{
+    padding: var(--content-padding);
+    display: grid;/*helps pull the button across*/
+    gap: var(--content-spacing);/*spacing the content*/ 
+}
+.product-category{
+    font-size: 0.8125rem; 
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+.product-title{
+    font-size: 2rem;
+    font-family: var(--ff-fontdecor);
+    color: var(--clr-neutral-Verydarkblue);
+    line-height: 1;/*for the heading*/
+    font-weight: 900;
+}
+.current-price{
+    font-weight: var(--fw-bold);
+    font-size: 2rem;
+    font-family: var(--ff-fontdecor); 
+    color: var(--clr-primary-Darkcyan);
+}
