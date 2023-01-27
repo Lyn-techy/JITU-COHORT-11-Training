@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assessment | Week 3</title>
+</head>
+<body>
+    <ol>
+        <li>
+            <p>Will the below two functions output the same results? Explain your answer.</p> <br>
+            <p><h3>Answer</h3> <br>
+                The first function foo1() is written correctly and will return an object {bar: "hello"} when called. <br>
+                The second function foo2() contains a typo in the return statement, the R is capitalized. Due to this, <br>
+                the JavaScript interpreter throws a syntax error when it encounters the capitalized Return keyword. <br>
+                The function will not execute and will not return any value. If one fixes the syntax error by changing <br>
+                the Return to return in the second function, it will output the same result as the first function. <br>
+                This further proves that JavaScript is case sensitive.
+            </p>
+        </li>
+        <li>
+            <p>Write a simple function that returns a Boolean indicating whether a string is a palindrome (a word, <br>
+               phrase, number, or other sequence of symbols or elements, whose meaning may be interpreted the <br>
+               same way in either forward or reverse direction). Hint: ignore spaces
+            </p> <br>
+            <p>Example: “alula” forwards and backwards is the same. <br>
+
+                “race car” forwards and backwards is the same
+            </p> <br>
+            <p><h3>Answer</h3> <br>
+                The function first removes any spaces in the input string using the replace() method. <br>
+                It then converts the string to lowercase using the toLowerCase() method. <br>
+                Then it reverses the string using the split(), reverse(), and join() methods, <br>
+                which converts the string to an array, reverses the order of the elements in the array, and then converts the reversed <br>
+                array back to a string. Finally, it compares the reversed string to the original string and returns true if they are equal, <br>
+                false if they are not.
+            </p>
+        </li>
+        <li>
+            <p>Using a Prompt allow user to enter numbers separated by commas then print the sum of the <br>
+                numbers.
+            </p> <br>
+            <p><h3>Answer</h3> <br>
+                The function sumNumbers() uses the prompt() method to ask the user to enter numbers separated by commas. <br>
+                The input string is then split into an array of strings using the split() method, with "," as the separator. <br>
+                The map() method is used to convert the strings to numbers using the parseFloat() function. <br>
+                The reduce() method is used to sum the numbers in the array. <br>
+                Finally, the sum is printed to the console using console.log().
+            </p>
+        </li>
+        <li>
+            <p>Create a function that, given a DOM Element on the page, will visit the element itself and all of its <br>
+                descendents (not just its immediate children). For each element visited, the function should pass <br>
+                that element to a provided callback function.
+            </p> <br>
+            <p>The arguments to the function should be: <br>
+
+                a DOM element <br>
+                
+                a callback function (that takes a DOM element as its argument)
+            </p> <br>
+            <p><h3>Answer</h3> <br>
+                This code will log all elements starting from the body element and its descendants in the DOM tree.
+            </p>
+        </li>
+    </ol>
+    <script src="index.js"></script>
+</body>
+</html>
