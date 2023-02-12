@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 5 Assessment</title>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h4>Question 1</h4>
+        <p>What is the difference between state and props?</p>
+        <h5>Solution</h5>
+        <table style="width:100%">
+            <tr>
+              <th>STATE</th>
+              <th>PROPS</th> 
+            </tr>
+            <tr>
+              <td>The data is passed within the component only.</td>
+              <td>The data is passed from one component to another.</td>
+              
+            </tr>
+            <tr>
+              <td>It is mutable(can be modified).</td>
+              <td>It is immutable(cannot be modified).</td> 
+            </tr>
+            <tr>
+                <td>State can be used only with the state components/class components.</td>
+                <td>Props can be used with state and functional components.</td> 
+            </tr>
+            <tr>
+                <td>State is both read and write.</td>
+                <td>Props are read only.</td> 
+            </tr>
+          </table>
+    </div>
+    <div>
+        <h4>Question 2</h4>
+        <p>With the following code blocks, can you say what will happen in each of these instances?</p>
+        <h5>Solution</h5>
+        <p>For literal datatypes (such as number and strings), the variable contains the value, and <br>
+            that cannot change. This is the case with the first two case scenarios. With JS objects,as is the case with the last case scenario, <br>
+            the variable is essentially a reference , which cannot change, however values within the object that is refers to can.
+        </p>
+    </div>
+    <div>
+        <h4>Question 3</h4>
+        <p>Outline the various stages of the React.js lifecycle</p>
+        <h5>Solution</h5>
+        <ol>
+            <li>Mounting</li>
+            <p>It means putting elements into the DOM.</p>
+        
+            <li>Updating</li>
+            <p>The next phase in the lifecycle is when a component is updated.</p>
+            <p>A component is updated whenever there is a change in the components <bold>state</bold> or <bold>props</bold></p>
+
+            <li>Unmounting</li>
+            <p>The next phase in the lifecycle is when a component is removed from the DOM.</p>
+        </ol>
+    </div>
+    <div>
+        <h4>Question 4</h4>
+        <p>How are controlled and uncontrolled components different?</p>
+        <h5>Solution</h5>
+        <ol>
+            <li>
+                In a controlled component, form data is handled by a React component. Whereas, <br>
+                in uncontrolled components, form data is handled by the DOM itself.
+            </li>
+            <li>
+                Usage of component State is a must for controlled components. Use of state is completely <br>
+                optional for uncontrolled components, but one must use Refs in it.
+            </li>
+            <li>
+                In controlled component, the form input elements values and mutations are totally driven by <br>
+                event handlers and value of the input element is always inferred from the state. <br>
+                In uncontrolled components, they don't use any states on input elements or any event handler.
+            </li>
+        </ol>
+    </div>
+    <div>
+        <h4>Question 5</h4>
+        <p>Explain what three dots mean in React.</p>
+        <h5>Solution</h5>
+        <p>These three dots are called the spread operator. The spread operator allows you to deconstruct an aray or <br>
+        object into separate variables.</p>
+    </div>
+    
+
+
+    <script src="index.js"></script>   
+</body>
+</html>
